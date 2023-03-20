@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { atom, selector } from "recoil";
+import ChracterCount from "./components/ChracterCount";
+import TextInput from "./components/TextInput";
+import "./App.css";
+
+export const textState = atom({
+  key: "textState",
+  default: "",
+});
+
+export const chracterCountState = selector({
+  key: "chracterCountState",
+  get: ({ get }) => {
+    const test = get(textState); // 위에 만든 atom의 값을 할당합니다.
+
+    return test.length;
+  },
+});
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TextInput />
+      <ChracterCount />
     </div>
   );
 }
