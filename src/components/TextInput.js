@@ -15,6 +15,7 @@ const TextInput = () => {
   return (
     <div>
       <input type={text} onChange={handleChange} />
+      <br />
       Echo:{text}
     </div>
   );
