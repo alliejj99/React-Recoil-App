@@ -1,4 +1,5 @@
 ### React Recoli App
+![Demo](https://user-images.githubusercontent.com/118407356/226320778-650e14f4-3b78-4182-a507-4ecc963f0075.gif)  
 
 - Recoil Root  
   Recoil 상태를 사용하는 컴포넌트는 부모 트리 어디가에 나타나는 RecoliRoot가 필요합니다. 루트 컴포넌트가 RecoilRoot를 넣기에 가장 좋은 방법입니다.  
